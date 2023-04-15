@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { SizeProps } from "../../@types/size.type";
 
-function Icon() {
+function DestinyLogo({initialSize}: SizeProps) {
+  const [size, setSize] = useState<number>(initialSize||120);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="500"
-      height="500"
+      width={size}
+      height={size}
       version="1"
       viewBox="0 0 375 375"
     >
@@ -1378,4 +1380,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default DestinyLogo;

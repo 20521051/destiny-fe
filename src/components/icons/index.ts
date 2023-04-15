@@ -1,0 +1,6 @@
+export {default as DestinyIcon} from "./DestinyIcon"
+export {default as DestinyLogo} from "./DestinyLogo"
+export {default as Facebook} from "./Facebook"
+export {default as Apple} from "./Apple"
+export {default as Google} from "./Google"
+export {default as Twitter} from "./Twitter"
