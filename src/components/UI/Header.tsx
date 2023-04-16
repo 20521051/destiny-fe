@@ -13,7 +13,7 @@ const Header = () => {
         <DestinyIcon initialSize={64}></DestinyIcon>
         <h1>DESTINY</h1>
       </div>
-      <div><SearchBar onSearch={searchHandler}/></div>
+      <div><SearchBar/></div>
       <button className="bg-cyan-200 rounded-xl w-40 h-30">Login</button>
     </header>
   );

@@ -1,33 +1,44 @@
 import React, { ChangeEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Paper, IconButton } from '@mui/material';
+import { SearchIcon } from "../icons";
 
-interface SearchBarProps {
-  onSearch: (searchTerm: string) => void;
-}
+const SearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const navigate = useNavigate();
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const onhandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  };
+    if (searchTerm) {
+      navigate(`/search/${searchTerm}`);
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      onSearch(searchTerm);
+      setSearchTerm('');
     }
   };
 
   return (
-    <div>
+    <Paper
+      component='form'
+      onSubmit={onhandleSubmit}
+      sx={{
+        borderRadius: 20,
+        border: '1px solid #e3e3e3',
+        pl: 2,
+        boxShadow: 'none',
+        mr: { sm: 5 },
+      }}
+    >
       <input
-        type="text"
+        className='search-bar'
+        placeholder='Search...'
         value={searchTerm}
-        onChange={handleChange}
-        onKeyPress={handleKeyPress}
-        placeholder="Search..."
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={() => onSearch(searchTerm)}>Search</button>
-    </div>
+      <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='search'>
+        <SearchIcon initialSize={28}/>
+      </IconButton>
+    </Paper>
   );
 };
 
