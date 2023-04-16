@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import { Footer}  from "./components/form";
+import { Footer, Header } from './components/UI';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Header></Header>
       <Footer></Footer>
     </div>
   )
