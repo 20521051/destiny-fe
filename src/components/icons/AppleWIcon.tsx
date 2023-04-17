@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { SizeProps } from "../../@types/size.type";
 
-function AppleWIcon() {
+function AppleWIcon({initialSize}: SizeProps) {
+  const [size, setSize] = useState<number>(initialSize||120);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width={size}
+      height={size}
       fill="none"
-      viewBox="0 0 40 40"
+      viewBox="0 0 48 48"
     >
       <rect width="40" height="40" fill="#000" rx="20"></rect>
       <path

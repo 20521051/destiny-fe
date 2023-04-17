@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { SizeProps } from "../../@types/size.type";
 
-function PinterestIcon() {
+function PinterestIcon({initialSize}: SizeProps) {
+  const [size, setSize] = useState<number>(initialSize||120);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
+      width={size}
+      height={size}
       fill="none"
       viewBox="0 0 48 48"
     >
