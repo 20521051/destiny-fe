@@ -9,7 +9,6 @@ function DarkModeIcon({initialSize}: SizeProps) {
       width={size}
       height={size}
       fill="none"
-      fill="none"
       viewBox="0 0 96 96"
     >
       <path fill="url(#pattern0)" d="M0 0H96V96H0z"></path>

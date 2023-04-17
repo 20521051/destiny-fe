@@ -3,3 +3,8 @@ export interface SizeProps{
     initialHeight?: number;
     initialSize?: number;
 }
+
+export interface attributeProps{
+    onClick?: () => void;
+    tailwindCss?: string;
+}
