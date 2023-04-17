@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { SizeProps } from "../../@types/size.type";
+import { SizeProps } from "../../@types/props.type";
 
-function InstagramIcon({initialSize}: SizeProps) {
+function ViberIcon({initialSize}: SizeProps) {
   const [size, setSize] = useState<number>(initialSize||120);
   return (
     <svg
