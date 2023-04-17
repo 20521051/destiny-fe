@@ -11,7 +11,11 @@ export {default as PaypalIcon} from "./PaypalIcon"
 export {default as PinterestIcon} from "./PinterestIcon"
 export {default as TelegramIcon} from "./TelegramIcon"
 export {default as ViberIcon} from "./ViberIcon"
-
+export {default as HomeIcon} from "./HomeIcon"
+export {default as LightModeIcon} from "./LightModeIcon"
+export {default as DarkModeIcon} from "./DarkModeIcon"
+export {default as StoryIcon} from "./StoryIcon"
+export {default as RankingIcon} from "./RankingIcon"
 
 
 
