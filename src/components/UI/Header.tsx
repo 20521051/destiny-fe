@@ -1,20 +1,27 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { DestinyIcon } from "../icons";
 import { SearchBar } from "../form";
+import CustomizedButtons from "../form/CustomizedButtons";
 
 const Header = () => {
-    const [input, setInput] = useState<string>("");
-    const searchHandler = ()=>{
-        setInput(input + '1');
-    }
+  const navigate = useNavigate();
+  const handleClickHome = () => {
+    navigate("/");
+  };
+  const handleClickSignIn = () => {
+    navigate("/login");
+  };
   return (
-    <header className="flex w-1440 h-200 top-0 left-0 border-b-slate-300 border-b-2 bg-white justify-between p-3 items-center">
-      <div className="flex items-center">
+    <header className="flex border-b-slate-300 border-b-2 bg-white justify-between p-3 pr-10 pl-10 items-center">
+      <div className="flex items-center" onClick={handleClickHome}>
         <DestinyIcon initialSize={64}></DestinyIcon>
-        <h1 className="select-none font-fira text-5xl">DESTINY</h1>
+        <h1 className="select-none font-josefin text-5xl">DESTINY</h1>
       </div>
-      <div><SearchBar/></div>
-      <button className="bg-cyan-200 rounded-xl w-40 h-30">Login</button>
+      <div>
+        <SearchBar />
+      </div>
+      <CustomizedButtons onClick={handleClickSignIn} title="Login"></CustomizedButtons>
     </header>
   );
 };

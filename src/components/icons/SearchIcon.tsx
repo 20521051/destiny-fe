@@ -1,16 +1,38 @@
-import React, {useState} from "react";
-import { SizeProps } from "../../@types/props.type";
+import React, { useEffect, useState } from "react";
+import { IconProps} from "../../@types/icon.type";
 
-function SearchIcon({initialSize}: SizeProps) {
-    const [size, setSize] = useState<number>(initialSize||120);
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-      viewBox="0 0 50 50"
+function SearchIcon({ initialSize, initialFill }: IconProps) {
+  const [size, setSize] = useState<number>(initialSize || 120);
+  const [hovered, setHovered] = useState<boolean>(false);
+  const [fillColor, setFillColor] = useState<string>(initialFill || "#717171");
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+  useEffect(() => {
+    hovered ? setFillColor("#333") : setFillColor("#717171");
+  }, [hovered]);
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 256 256"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <path d="M21 3C11.621 3 4 10.621 4 20s7.621 17 17 17c3.71 0 7.14-1.195 9.938-3.219l13.156 13.125 2.812-2.812-13-13.032A16.923 16.923 0 0038 20c0-9.379-7.621-17-17-17zm0 2c8.297 0 15 6.703 15 15s-6.703 15-15 15S6 28.297 6 20 12.703 5 21 5z"></path>
+      <path
+        fill={fillColor}
+        strokeMiterlimit="10"
+        d="M13 3C7.489 3 3 7.489 3 13s4.489 10 10 10a9.947 9.947 0 006.322-2.264l5.971 5.971a1 1 0 101.414-1.414l-5.97-5.97A9.947 9.947 0 0023 13c0-5.511-4.489-10-10-10zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8-8-3.57-8-8 3.57-8 8-8z"
+        fontFamily="none"
+        fontSize="none"
+        fontWeight="none"
+        textAnchor="none"
+        transform="scale(8.53333)"
+      ></path>
     </svg>
   );
 }
