@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SizeProps } from "../../@types/props.type";
+import { SizeProps } from "../../@types/icon.type";
 
 function InstagramIcon({initialSize}: SizeProps) {
   const [size, setSize] = useState<number>(initialSize||120);
