@@ -10,6 +10,8 @@ export default {
     fontFamily: {
       'parisienne': 'Parisienne',
       'fira':'Fira',
+      'josefin':'Josefin',
+      'montserrat':'Montserrat',
     },
   },
   plugins: [],

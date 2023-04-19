@@ -38,3 +38,13 @@ button {
   font-family: 'Fira';
   src: url('./assets/fonts/FiraSans-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('./assets/fonts/JosefinSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf');
+}
