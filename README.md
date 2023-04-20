@@ -1,18 +1,26 @@
 # client
+
+## Tự động fix các lỗi liên quan Prettier
+```bash
+yarn run prettier:fix
 ```
-https://vngraphic.com/freepik
-
-dùng để get link mấy cái file figma hay design ở trên web envato element ấy nhé
-
-https://elements.envato.com/
-
-lấy template 
-
-nodemailer: trả pass mới cho người dùng qua mail 
-
-svg to jsx 
-
-chuyển svg sang code tsx 
-
-deadless ui  với tippy.js 
+## Tự động fix các lỗi liên quan ESLint
+```bash
+yarn run lint:fix
+```
+## Chạy project tại port 3000
+```bash
+yarn dev
+```
+## Build project
+```bash
+yarn run build
+```
+## Preview kết quả build
+```bash
+yarn run preview
+```
+## Kiểm tra lỗi liên quan đến ESLint
+```bash
+yarn run lint
 ```
