@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const SlideShow = () => {
   /* set slide in here */
@@ -22,29 +22,48 @@ const SlideShow = () => {
   ]
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const [activeIndex, setActiveIndex] = useState<number>(0)
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null)
+  const [status, setStatus] = useState<boolean>(false)
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
+    const newIndex = (currentIndex - 1) % slides.length
     setCurrentIndex(newIndex)
+    setActiveIndex(newIndex)
   }
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1
-    const newIndex = isLastSlide ? 0 : currentIndex + 1
+    const newIndex = (currentIndex + 1) % slides.length
     setCurrentIndex(newIndex)
+    setActiveIndex(newIndex)
+    setStatus(false)
   }
 
   const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex)
     setActiveIndex(slideIndex)
+    setStatus(false)
   }
-  setInterval(() => {
-    nextSlide()
-  }, 4000)
-  useLayoutEffect(() => {
-    goToSlide(currentIndex)
+
+  useEffect(() => {
+    setTimeoutId(
+      setTimeout(() => {
+        setStatus(true)
+      }, 5000)
+    )
   }, [currentIndex])
+
+  useEffect(() => {
+    if (timeoutId && !status) {
+      clearTimeout(timeoutId)
+      setTimeoutId(null)
+    }
+    if (status) nextSlide()
+
+    return () => {
+      if (status) setStatus(false)
+    }
+  }, [status])
+
   return (
     <div className='max-w-[1800px] h-[450px] w-full m-auto py-16 px-20 relative group'>
       <div
