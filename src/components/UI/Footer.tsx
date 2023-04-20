@@ -49,7 +49,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className='flex justify-between mr-10 ml-10 mb-5 text-center'>
+      <div className='flex justify-between mr-10 ml-10 mb-5 text-center items-center'>
         <div>
           <DestinyIcon initialSize={100}></DestinyIcon>
         </div>
