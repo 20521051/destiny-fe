@@ -1,9 +1,13 @@
+export { default as SearchIcon } from './SearchIcon'
+export { default as CHPlay } from './CHPlay'
+export { default as AppStore } from './AppStore'
+
+
 export { default as DestinyIcon } from './DestinyIcon'
 export { default as FacebookIcon } from './FacebookIcon'
 export { default as AppleIcon } from './AppleIcon'
 export { default as GoogleIcon } from './GoogleIcon'
 export { default as TwitterIcon } from './TwitterIcon'
-export { default as SearchIcon } from './SearchIcon'
 export { default as AppleWhiteIcon } from './AppleWhiteIcon'
 export { default as InstagramIcon } from './InstagramIcon'
 export { default as LinkedinIcon } from './LinkedinIcon'
