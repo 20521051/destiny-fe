@@ -1,5 +1,5 @@
 import React from 'react'
-import { AttributeProps } from '../../@types/attribute.type'
+import { AttributeProps } from '../../types/attribute.type'
 
 const SideBar = ({ styleCss }: AttributeProps) => {
   return (

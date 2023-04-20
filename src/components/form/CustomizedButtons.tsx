@@ -10,6 +10,7 @@ interface Customized {
   fontSize?: number
   borderRadius?: string
   title?: string
+  type?:string
 }
 
 export default function CustomizedButtons({
@@ -20,7 +21,8 @@ export default function CustomizedButtons({
   color,
   fontSize,
   borderRadius,
-  title
+  title,
+  type
 }: Customized) {
   const [hovered, setHovered] = useState<boolean>(false)
   const [textColor, setTextColor] = useState<string>(color || '#fff')
@@ -32,6 +34,9 @@ export default function CustomizedButtons({
   }
   const handleMouseEnter = () => {
     setHovered(true)
+  }
+  const handleLoad = ()=>{
+
   }
   useLayoutEffect(() => {
     hovered ? setTextColor('#333') : setTextColor('#fff')
@@ -54,6 +59,8 @@ export default function CustomizedButtons({
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onLoad={handleLoad}
+      
     >
       {title}
     </Button>

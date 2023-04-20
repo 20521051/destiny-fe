@@ -1,5 +1,5 @@
 import React from 'react'
-import { DestinyIcon } from '../icons'
+import { DestinyIcon, AppleIcon, AppleWhiteIcon } from '../icons'
 
 const Footer = () => {
   return (
@@ -54,10 +54,9 @@ const Footer = () => {
           <DestinyIcon initialSize={100}></DestinyIcon>
         </div>
         <p>© 2023 Destiny. All rights reserved</p>
-        <div className='flex justify-between'>
-          <button>facebook</button>
-          <button>facebook</button>
-          <button>facebook</button>
+        <div className='flex justify-between items-center'>
+          <AppleIcon initialSize={48}></AppleIcon>
+          <AppleWhiteIcon initialSize={48}></AppleWhiteIcon>
         </div>
       </div>
     </footer>
