@@ -48,14 +48,14 @@ const SearchBar = () => {
       <IconButton
         type='submit'
         sx={{
-          p: '10px',
+          p: '8px',
           color: 'gray',
           borderTopLeftRadius: 0,
           borderBottomLeftRadius: 0
         }}
         aria-label='search'
       >
-        <SearchIcon initialSize={28} />
+        <SearchIcon initialSize={22} />
       </IconButton>
     </Paper>
   )

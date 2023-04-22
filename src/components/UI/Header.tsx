@@ -12,15 +12,15 @@ const Header = () => {
     navigate('/login')
   }
   return (
-    <header className='flex border-b-slate-300 border-b-2 bg-white justify-between p-3 pr-10 pl-10 items-center'>
+    <header className='flex h-[67px] border-b-slate-300 border-b-2 bg-white justify-between px-10 items-center'>
       <div className='flex items-center' onClick={handleClickHome}>
-        <DestinyIcon initialSize={64}></DestinyIcon>
-        <h1 className='select-none font-josefin text-5xl'>DESTINY</h1>
+        <DestinyIcon initialSize={36}></DestinyIcon>
+        <h1 className='select-none font-josefin text-4xl'>DESTINY</h1>
       </div>
       <div>
         <SearchBar />
       </div>
-      <CustomizedButtons onClick={handleClickSignIn} title='Login'></CustomizedButtons>
+      <CustomizedButtons onClick={handleClickSignIn} title='Login' padding='5px 40px'></CustomizedButtons>
     </header>
   )
 }

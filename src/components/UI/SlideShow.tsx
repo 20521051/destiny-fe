@@ -65,21 +65,21 @@ const SlideShow = () => {
   }, [status])
 
   return (
-    <div className='max-w-[1800px] h-[450px] w-full m-auto py-16 px-20 relative group'>
+    <div className='max-w-[1400px] h-[450px] w-full m-auto py-16 px-20 relative group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='w-[1700px] h-[320px] rounded-2xl bg-center bg-cover duration-500'
+        className='w-[1300px] h-[280px] rounded-2xl bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}
       <button
-        className='hidden group-hover:block absolute top-[50%] translate-x-[150%] translate-y-[-100%] left-5 text-4xl rounded-full bg-black/20 text-white cursor-pointer w-16 h-16 font-josefin'
+        className='hidden group-hover:block absolute top-[45%] translate-x-[150%] translate-y-[-100%] left-5 text-4xl rounded-full bg-black/20 text-white cursor-pointer w-16 h-16 font-josefin'
         onClick={prevSlide}
       >
         &lt;
       </button>
       {/* Right Arrow */}
       <button
-        className='hidden group-hover:block absolute top-[50%] -translate-x-[150%] translate-y-[-100%] right-5 text-4xl rounded-full bg-black/20 text-white cursor-pointer w-16 h-16 font-josefin'
+        className='hidden group-hover:block absolute top-[45%] -translate-x-[150%] translate-y-[-100%] right-5 text-4xl rounded-full bg-black/20 text-white cursor-pointer w-16 h-16 font-josefin'
         onClick={nextSlide}
       >
         &gt;
@@ -89,8 +89,8 @@ const SlideShow = () => {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`text-2xl cursor-pointer container bg-gray-300 rounded-full w-14 h-5 m-2 ${
-              activeIndex === slideIndex ? 'w-24 bg-gray-500' : ''
+            className={`text-2xl cursor-pointer container bg-gray-300 rounded-full w-[30px] h-3 m-2 ${
+              activeIndex === slideIndex ? 'w-[44px] bg-gray-500' : ''
             }`}
           ></div>
         ))}

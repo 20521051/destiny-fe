@@ -9,17 +9,21 @@ const Footer = () => {
   }
 
   return (
-    <footer className='flex h-[450px] flex-col bg-slate-900 text-white justify-between'>
-      <div className='text-center'>
-        <h2 className='m-10 text-5xl font-josefin'>Welcome to Destiny</h2>
+    <footer className='flex flex-col bg-slate-900 text-white justify-between px-[100px]'>
+      <div className='text-center m-10 pt-10'>
+        <h2 className='text-4xl font-josefin'>Welcome to Destiny</h2>
       </div>
-      <div className='flex justify-center items-center'>
-        <button className='translate-x-[-5%]'><CHPlay initialSize={200} initialFill='#fff' initialColor='#282a36' initialBorderColor='#ec4899'/></button>
-        <button className='translate-x-[5%]'><AppStore initialSize={200} initialFill='#fff' initialColor='#282a36' initialBorderColor='#ec4899'/></button>
+      <div className='flex justify-center items-center pb-6'>
+        <button className='translate-x-[-5%]'>
+          <CHPlay initialSize={160} initialFill='#fff' initialColor='#282a36' initialBorderColor='#ec4899' />
+        </button>
+        <button className='translate-x-[5%]'>
+          <AppStore initialSize={160} initialFill='#fff' initialColor='#282a36' initialBorderColor='#ec4899' />
+        </button>
       </div>
       <div className='flex justify-between m-10 pl-24 pr-24'>
         <div>
-          <h2 className='text-3xl font-josefin uppercase'>Navigation</h2>
+          <h2 className='text-2xl font-josefin uppercase'>Navigation</h2>
           <ul>
             <li>Home</li>
             <li>Collections</li>
@@ -29,7 +33,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className='text-3xl font-josefin uppercase'>About Destiny</h2>
+          <h2 className='text-2xl font-josefin uppercase'>About Destiny</h2>
           <ul>
             <li>Customer Service</li>
             <li>Careers</li>
@@ -37,7 +41,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className='text-3xl font-josefin uppercase'>My team</h2>
+          <h2 className='text-2xl font-josefin uppercase'>My team</h2>
           <ul>
             <li>About us</li>
             <li>Collections</li>
@@ -47,7 +51,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className='text-3xl font-josefin uppercase'>Talk to us</h2>
+          <h2 className='text-2xl font-josefin uppercase'>Talk to us</h2>
           <ul>
             <li>About us</li>
             <li>Collections</li>
@@ -59,7 +63,7 @@ const Footer = () => {
       </div>
       <div className='flex justify-between mr-10 ml-10 mb-5 text-center items-center'>
         <div onClick={handleClickLogo}>
-          <DestinyIcon initialSize={100}></DestinyIcon>
+          <DestinyIcon initialSize={70}></DestinyIcon>
         </div>
         <p>© 2023 Destiny. Vietnam's leading finding soulmate platform</p>
         <div className='flex justify-between items-center'>
