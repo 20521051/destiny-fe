@@ -1,7 +1,10 @@
 export { default as SearchIcon } from './SearchIcon'
 export { default as CHPlay } from './CHPlay'
 export { default as AppStore } from './AppStore'
-
+export { default as LockIcon } from './LockIcon'
+export { default as PhoneIcon } from './PhoneIcon'
+export { default as VisibilityIcon } from './VisibilityIcon'
+export { default as VisibilityOffIcon } from './VisibilityOffIcon'
 
 export { default as DestinyIcon } from './DestinyIcon'
 export { default as FacebookIcon } from './FacebookIcon'
