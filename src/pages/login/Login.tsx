@@ -137,9 +137,10 @@ export default function Login() {
                 </button>
               </div>
               <p className='text-xl text-center my-4'>
-                Your continued use of this website means that you agree to our
-                {' '}
-                <a className='underline hover:text-red-600' type='link'>Terms of Use</a>
+                Your continued use of this website means that you agree to our{' '}
+                <a className='underline hover:text-red-600' type='link'>
+                  Terms of Use
+                </a>
               </p>
             </footer>
           </div>

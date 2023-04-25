@@ -1,8 +1,8 @@
 declare interface IResponseSuccess<T> {
-  message: string;
-  data: T;
+  message: string
+  data: T
 }
 declare interface IResponseError {
-  error: string;
-  statusCode: number;
+  error: string
+  statusCode: number
 }

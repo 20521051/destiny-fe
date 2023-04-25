@@ -86,13 +86,13 @@ const SlideShow = () => {
       </button>
       <div className='flex top-4 justify-start py-5 ml-6 mt-5'>
         {slides.map((slide, slideIndex) => (
-          <div
+          <button
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
             className={`text-2xl cursor-pointer container bg-gray-300 rounded-full w-[30px] h-3 m-2 ${
               activeIndex === slideIndex ? 'w-[44px] bg-gray-500' : ''
             }`}
-          ></div>
+          ></button>
         ))}
       </div>
     </div>

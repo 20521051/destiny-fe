@@ -6,7 +6,7 @@ const Home = () => {
     <div className='Home'>
       <Header></Header>
       <div className='flex'>
-        <SideBar></SideBar>
+        <SideBar mode='light'></SideBar>
         <div className=''>
           <SlideShow></SlideShow>
         </div>

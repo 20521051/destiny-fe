@@ -1,22 +1,17 @@
 import React, { useState } from 'react'
 import { IconProps } from '../../types/icon.type'
 
-function LightModeIcon({ initialSize }: IconProps) {
+function LightModeIcon({ initialSize, initialFill }: IconProps) {
   const [size, setSize] = useState<number>(initialSize || 120)
+  const [fillColor, setFillColor] = useState<string>(initialFill || '#fff')
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} fill='none' viewBox='0 0 96 96'>
-      <path fill='url(#pattern0)' d='M0 0H96V96H0z'></path>
-      <defs>
-        <pattern id='pattern0' width='1' height='1' patternContentUnits='objectBoundingBox'>
-          <use transform='scale(.01042)' xlinkHref='#image0_1_2'></use>
-        </pattern>
-        <image
-          id='image0_1_2'
-          width='96'
-          height='96'
-          xlinkHref='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEeUlEQVR4nO2dz2tVRxTHP0SpGmMJJdbEX2hCizvdupDutBo3imihIkgNuouCrck/IGjBnQvbajAFU3GhICiuLIK0dOeiRE38EUVo42/amgaTRgbmQSjmzpn7xnfv85wPzPLNNzn33jMzZ86cAcMwDMMwDMMwjPqlDegEeoFTwM/AIPAY+BeY8m0CeALcBK4Cff43m4DWov+JeqIJ2AKcAIanGbjaNuz7dH3PL/qfLBsNwOfAAPAqodFnak7jrNd02qrf9v3A3RoYPevLOOD/FjU0Aj3eZ0+VoP0DfI0SdgAPSmB01/7zbm8ZClgOXCmB0SttBFiPEnYBL0tg9Er7EfgQBcwBvk/0tv7k5/VuGrnarw8+ANYBY8J+3LphD0pYBPxShW++DnQDn2RodEQM5KPAWpTQAQzlMPxT4Fv/e8lM6oaw3zvCPt8LVgGPIg3/zLuXBRE6J4V9D3p3pYKOSONPAMeBjyJ1tkUsspagyOfHuJ3bOX1yq9Dv/6nJ7cyJHHD7q1j6nxP0P6ZpwCViqjnp4y552SDU+QpF7BIaZdz77rzMBn4XLrLUsFy4wh33GyPV0CXQcTGmZhRxReh2tiUYY0YEWs5FoSmqKXE9BxJo7RXonEERjcKQcn8CrVl+yhra4VIRUq7QIzD+7US7TJsFWkdQxAIfswmtcNcm0rsY0PobaEER+wVv5PFEWi6G8zqgdQxFNAg20J/liO3MRLdghqUm3IBP4wi9/YcS6l0LaF1CGQMBgzyNDClnsdCPJVl6X6CIJkHS1NGEejsFg6+bDqthi2AbMaU//iGgdx5lnAgYxO3hpmQwoOdiQ6oIJcq6GUsqmv0XlaXXjiLaBLOfrOyFWD4LaP2BMjoDBrmfWG9fQM+tjlXRGzCIS/VOybGA3mGU0RcwiHtAKbkQ0NuNMq4GDOKmqCn5LaDnxghVhKaEaxLr3QvofYoyRgMGSZ159jyg58IUqghlH89LrDdeY73SE1oUpT7oNhVo6rAHUDDmggrGBuGCsWlowdhCrGAsFFEwFowrGAtHF4xtyJQA25IsGNuULxhLS6mDxCx3yj0VXwa01CVm4Qtm1Co1scVSE/Ml5/ZSu+TcyyijjOnp7Sijlgc0Wu2AxtsH4yclOqL0l7YjSrU+pNcp0EqZFl8X1PKYagNwK6DjpsdLUUYtD2p3CXRUHdSOKVUwAWytUsdKFWQU63gheAjjwMYqH4IV65gBK1dTAspWsKkLZcSWLDttJct0FO1biTJiy1ZO5ixbuV3Y/5CmspXVFm7tiXRL0sKt7k6ZxSj8EoYjH4JrVro48Zjwa46H8P/i3Vmn79v9bUqSPlUV764wF/gu50OY3h76QiGV8vVrfKqMO6hh5euFhTdeJngQqZqaCxyms8KuMCkHO+wSn3LsJ3xTomus3Amggyikyc90QueC32W76/e5U6XT1CUNPlw94C9Ve9dGt6sMA1/FVj99vZPQ6EM+amuXeeYIvnX6UEWfT9a6+ZbrbMcyrrP9OFbUMAzDMAzDMAyDSN4ArUmXm52b75kAAAAASUVORK5CYII='
-        ></image>
-      </defs>
+    <svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} fill='none' viewBox='0 0 41 41'>
+      <path
+        fill={fillColor}
+        fillRule='evenodd'
+        d='M20.186 3.582c.92 0 1.667.747 1.667 1.667v3.333a1.667 1.667 0 01-3.334 0V5.25c0-.92.747-1.667 1.667-1.667zm11.785 4.882c.651.65.651 1.706 0 2.357l-2.357 2.357a1.667 1.667 0 01-2.357-2.357l2.357-2.357c.651-.65 1.706-.65 2.357 0zm-23.57 0c.651-.65 1.706-.65 2.357 0l2.357 2.357a1.667 1.667 0 01-2.357 2.357l-2.357-2.357a1.667 1.667 0 010-2.357zm11.785 7.618a4.167 4.167 0 100 8.334 4.167 4.167 0 000-8.334zm-7.5 4.167a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0zm-9.166 0c0-.92.746-1.666 1.666-1.666H8.52a1.667 1.667 0 110 3.333H5.186c-.92 0-1.666-.746-1.666-1.667zm26.666 0c0-.92.746-1.666 1.667-1.666h3.333a1.667 1.667 0 110 3.333h-3.333c-.92 0-1.667-.746-1.667-1.667zm-17.07 7.071c.65.651.65 1.706 0 2.357l-2.358 2.357a1.667 1.667 0 11-2.357-2.357l2.357-2.357c.651-.65 1.706-.65 2.357 0zm14.141 0c.651-.65 1.706-.65 2.357 0l2.357 2.357a1.667 1.667 0 11-2.357 2.357l-2.357-2.357a1.667 1.667 0 010-2.357zm-7.07 2.93c.92 0 1.666.745 1.666 1.666v3.333a1.667 1.667 0 11-3.334 0v-3.333c0-.92.747-1.667 1.667-1.667z'
+        clipRule='evenodd'
+      ></path>
     </svg>
   )
 }

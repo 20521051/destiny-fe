@@ -1,22 +1,17 @@
 import React, { useState } from 'react'
 import { IconProps } from '../../types/icon.type'
 
-function DarkModeIcon({ initialSize }: IconProps) {
+function DarkModeIcon({ initialSize, initialFill }: IconProps) {
   const [size, setSize] = useState<number>(initialSize || 120)
+  const [fillColor, setFillColor] = useState<string>(initialFill || '#fff')
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} fill='none' viewBox='0 0 96 96'>
-      <path fill='url(#pattern0)' d='M0 0H96V96H0z'></path>
-      <defs>
-        <pattern id='pattern0' width='1' height='1' patternContentUnits='objectBoundingBox'>
-          <use transform='scale(.01042)' xlinkHref='#image0_1_2'></use>
-        </pattern>
-        <image
-          id='image0_1_2'
-          width='96'
-          height='96'
-          xlinkHref='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEL0lEQVR4nO2dW4hVVRjHf5YzJYKWWl5IJQoTfPNB1LygIiEiqJQGvaSVaIqoUa9CD+aTooiieM2nEFG8IBJRoPg0lVI6eEHFSzQoXvCGovPJhk84x7P3mTPOXpdz9veDP8zDYTjr/99n77XWt9baYBiGYRiGYRiGETd9gU+A74CtwK/Av0AbcAsQoF3/Phr6yzYCPYDpwCagVc2VGpV8dljoBtQjrwFTgZ+B+50wPE2rQjemnugJLAbOddH0Ul0HXg/dsNhpUuP/z9H4RJeBRUD30A2MmTnA+ZyNT25bS4Hm0I2LmYHAoZyNT3Qc+DB042LnM+CmA/N36O3MyKBZ++7iQCvN9Y4HUL87Mn+VmV+dj4BLjszfAXSzALJJHojXHJl/CnjTzM9mqMMr/57+sowM+utASBxpoTmfTdIV/MOh+X/Z9EJ1tjg0X4CxdvVn86Vj84+Y+dkMKimKuNJ4CyCbA47NP2HmZ/O5Y/MF+MYCyO71XHBs/kPgLQsgncUerv49Zn520dzVVIOUaJ4FkM63Hsxv1wKOkcIpDwG0mvPpfOzBfAF2WwDp7PQUwAoLIL3redtTANMsgEomezJfgBEWQCVrPAbQ2wKopNWT+c/M/Ep6dXKVclenIIyXmOjx9nPb3K9kuccAHloAlWzzGIAAb1gI5RzxHEB/C6Cck54DGGMBlJP3RgrpQPMtgHIeew5grQUQNoCTFkA5jzwH0G4FmXIeeA5AbC1oOTcCBPC33Yb8liElRdYdDTQQE5Wd/aC42mgnNSgpBBWeHwIGcNrmhmBSwAAE+LHoP4FeWqkKFcATXRJTaHyVJCVDV4F3KDDrAwcgug+tsLUCn8tSpIr2F3XDXpOH7UhSo7boKVuFY1cE5kvJ+tHCHczka3Gu1KhD2kMrFC0RGC8lOgsMp0B8FYHp8pLuAgso0Bal/yIwXVKUbJsdQgFYEoHZUmVh1+pGfzYkR5FdjMBsqaI2PdbsXYceBF2/NDMCk6UGPdIu64ycRtGjgQ16COH50Evp90dgsHRCd4B9wPd6BkWfDtqXbBQfqfuif8l49u0NeYTa4IhGx/KKeqATjS0l+kd7VrX+j2UEZHYEJkpgfUFgNkVgggTSRiKZqPstAjPEs47FND3eN+dj6CVyndM2R8XgOhgfSA66ArxPpHyg5UNpUF3VNkZ/gOuZCMySnHWhHsx/QR99SEmD6DjQjzqju06M+dpjLI60ud7fzvGpoxc4iGMlo/y5NAgDdB5G6kSHgfdoQGZoGVEiVXIA+SwanCYt6lyJwPDS+sGymEa2PmgGvtbZx1DGt+h3SF4qV2jG6D6Em57qAtuBUaEbHWvXdYoeEPUn8DQHw9t1z9lPwIQiLujqCr31uJwlOu19UM28rt3Ex1p2bNMSYYtuqVqnS1XGAW+HboRhGIZhGIZhGBSa5yU2Cufgf1kwAAAAAElFTkSuQmCC'
-        ></image>
-      </defs>
+    <svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} fill='none' viewBox='0 0 41 41'>
+      <path
+        fill={fillColor}
+        fillRule='evenodd'
+        d='M20.752 4.57a1.667 1.667 0 01-.157 1.932 13.438 13.438 0 00-3.18 8.704c0 7.455 6.043 13.499 13.498 13.499.97 0 1.912-.102 2.82-.295a1.667 1.667 0 011.62 2.706 16.8 16.8 0 01-12.865 5.977c-9.296 0-16.832-7.536-16.832-16.832 0-8.093 5.71-14.848 13.32-16.465a1.667 1.667 0 011.776.775zM15.34 8.808a13.492 13.492 0 00-6.352 11.454c0 7.455 6.044 13.499 13.5 13.499 2.457 0 4.761-.656 6.747-1.804-8.509-.842-15.155-8.02-15.155-16.75 0-2.265.448-4.426 1.26-6.399z'
+        clipRule='evenodd'
+      ></path>
     </svg>
   )
 }

@@ -1,30 +1,30 @@
-import axios from "axios";
+import axios from 'axios'
 
 const axiosService = axios.create({
-  baseURL: "https://api.example.com",
-});
+  baseURL: 'https://api.example.com'
+})
 axiosService.interceptors.request.use(
   async function (config) {
-    const token = 'getCookie("Authorization")';
+    const token = 'getCookie("Authorization")'
 
     if (token && config.headers) {
-      config.headers.Authorization = `Bearer ${token}`;
+      config.headers.Authorization = `Bearer ${token}`
     }
-    return config;
+    return config
   },
   function (error) {
     // Do something with request error
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
+)
 
 // Add a response interceptor
 axiosService.interceptors.response.use(
   function (response) {
-    return response;
+    return response
   },
   function (error) {
-    return Promise.reject(error.response.data);
+    return Promise.reject(error.response.data)
   }
-);
-export default axiosService;
+)
+export default axiosService

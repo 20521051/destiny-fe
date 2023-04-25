@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { IconProps } from '../../types/icon.type'
 
-function HomeIcon({ initialSize }: IconProps) {
+function HomeIcon({ initialSize, initialFill }: IconProps) {
   const [size, setSize] = useState<number>(initialSize || 120)
+  const [fillColor, setFillColor] = useState<string>(initialFill || '#333')
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width={size} height={size} fill='none' viewBox='0 0 96 96'>
       <path fill='url(#pattern0)' d='M0 0H96V96H0z'></path>
