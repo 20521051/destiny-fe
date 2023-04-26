@@ -1,1 +1,2 @@
-export { default as ErrorLayout } from './ErrorLayout/ErrorLayout'
+export { ErrorLayout } from './ErrorLayout'
+export { EventLayout } from './EventLayout'

@@ -12,7 +12,6 @@ import {
 } from '../../components/icons'
 import FormControl from '@mui/material/FormControl'
 import Input from '@mui/material/Input'
-import InputLabel from '@mui/material/InputLabel'
 import { useNavigate } from 'react-router-dom'
 import { Checkbox, IconButton, InputAdornment } from '@mui/material'
 
@@ -33,7 +32,9 @@ export default function Login() {
     setChecked(event.target.checked)
   }
 
-  const handleClickForgot = () => {}
+  const handleClickForgot = () => {
+    navigate('/register')
+  }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -47,22 +48,22 @@ export default function Login() {
   return (
     <div className='h-[713px] flex justify-center bg-gradient-to-r from-emerald-100 to-pink-100'>
       <div className='w-3/4 flex bg-white m-20 rounded-2xl border-[1px] border-solid border-slate-400'>
-        <aside className='w-[45%] bg-teal-200 rounded-2xl'>
+        <aside className='w-[45%] bg-teal-200 rounded-2xl overflow-hidden'>
           <div className='mt-5'>
             <DestinyIcon initialSize={64} />
           </div>
-          <img className='object-fill' src='/src/assets/images/Naraka.jpg'></img>
+          <img className='inline-block object-cover' src='/src/assets/images/Naraka.jpg' alt='img-aside'></img>
         </aside>
         <div className='w-[55%] flex justify-center items-center'>
           <div className='w-[60%] flex flex-col'>
             <header className='mb-14'>
               <h2 className='font-josefin text-7xl mb-3'>Sign In</h2>
               <p>
-                Don't have an account?
-                <a className='text-emerald-500 hover:text-red-600' onClick={handleClickSignUp}>
+                Don&rsquo;t have an account?
+                <button className='text-emerald-500 hover:text-red-600' onClick={handleClickSignUp}>
                   {' '}
                   Register
-                </a>
+                </button>
               </p>
             </header>
 
@@ -111,9 +112,9 @@ export default function Login() {
                   <Checkbox checked={checked} onChange={handleChange} inputProps={{ 'aria-label': 'controlled' }} />
                   <p>Remember me</p>
                 </div>
-                <div className='hover:text-red-600' onClick={handleClickForgot}>
+                <button className='hover:text-red-600' onClick={handleClickForgot}>
                   Forgot Password?
-                </div>
+                </button>
               </div>
               <div className='flex justify-center mt-8 mb-12'>
                 <button className='bg-slate-400 w-[200px] h-[40px] rounded-3xl'>Login</button>
@@ -138,9 +139,7 @@ export default function Login() {
               </div>
               <p className='text-xl text-center my-4'>
                 Your continued use of this website means that you agree to our{' '}
-                <a className='underline hover:text-red-600' type='link'>
-                  Terms of Use
-                </a>
+                <button className='underline hover:text-red-600'>Terms of Use</button>
               </p>
             </footer>
           </div>

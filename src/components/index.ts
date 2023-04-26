@@ -1,0 +1,7 @@
+export { Footer } from './Footer'
+export { Header } from './Header'
+export { SideBar } from './SideBar'
+export { SlideShow } from './SlideShow'
+export { SearchBar } from './SearchBar'
+export { CustomizedButtons } from './CustomizedButtons'
+export { ErrorBoundary } from './ErrorBoundary'
