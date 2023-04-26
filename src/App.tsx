@@ -5,10 +5,10 @@ import { Login, Register, Home, Error } from './pages'
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path='/' Component={Home} />
-      <Route path='/login' Component={Login} />
-      <Route path='/register' Component={Register} />
-      <Route path='/*' Component={Error} />
+      <Route path='/' element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/*' element={<Error />} />
     </Routes>
   </BrowserRouter>
 )

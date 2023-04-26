@@ -13,7 +13,7 @@ const Header = () => {
   }
   return (
     <header className='flex h-[67px] border-b-slate-300 border-b-2 bg-white justify-between px-10 items-center'>
-      <button className='flex items-center' onClick={handleClickHome} >
+      <button className='flex items-center' onClick={handleClickHome}>
         <DestinyIcon initialSize={36}></DestinyIcon>
         <h1 className='select-none font-josefin text-4xl'>DESTINY</h1>
       </button>

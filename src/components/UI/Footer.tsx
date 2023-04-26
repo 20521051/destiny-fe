@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 className='text-2xl font-josefin uppercase'>About Destiny</h2>
-          <ul>
+          <ul className='cursor-pointer'>
             <li>Customer Service</li>
             <li>Careers</li>
             <li>FAQ</li>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 className='text-2xl font-josefin uppercase'>My team</h2>
-          <ul>
+          <ul className='cursor-pointer'>
             <li>About us</li>
             <li>Collections</li>
             <li>Our Story</li>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 className='text-2xl font-josefin uppercase'>Talk to us</h2>
-          <ul>
+          <ul className='cursor-pointer'>
             <li>About us</li>
             <li>Collections</li>
             <li>Our Story</li>
@@ -62,10 +62,10 @@ const Footer = () => {
         </div>
       </div>
       <div className='flex justify-between mr-10 ml-10 mb-5 text-center items-center'>
-        <div onClick={handleClickLogo}>
+        <button onClick={handleClickLogo}>
           <DestinyIcon initialSize={70}></DestinyIcon>
-        </div>
-        <p>© 2023 Destiny. Vietnam's leading finding soulmate platform</p>
+        </button>
+        <p>© 2023 Destiny. Vietnam&rsquo;s leading finding soulmate platform</p>
         <div className='flex justify-between items-center'>
           <FacebookIcon initialSize={36}></FacebookIcon>
           <LinkedinIcon initialSize={36}></LinkedinIcon>

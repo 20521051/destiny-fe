@@ -9,9 +9,9 @@ export default {
     extend: {},
     fontFamily: {
       'parisienne': 'Parisienne',
-      'fira':'Fira',
-      'josefin':'Josefin',
-      'montserrat':'Montserrat',
+      'fira': 'Fira',
+      'josefin': 'Josefin',
+      'montserrat': 'Montserrat',
     },
   },
   plugins: [],
