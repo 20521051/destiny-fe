@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Login, Register, Home, NotFound } from './pages'
+import { Login, Register, Home, NotFound } from '~/pages'
 
 const App = () => (
   <BrowserRouter>

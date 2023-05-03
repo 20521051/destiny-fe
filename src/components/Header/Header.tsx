@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { DestinyIcon } from '../icons'
-import { SearchBar, CustomizedButtons } from '../form'
+import { DestinyIcon } from '~/components/icons'
+import { SearchBar, CustomizedButtons } from '~/components'
 
 const Header = () => {
   const navigate = useNavigate()

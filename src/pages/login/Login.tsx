@@ -9,7 +9,7 @@ import {
   VisibilityIcon,
   VisibilityOffIcon,
   PhoneIcon
-} from '../../components/icons'
+} from '~/components/icons'
 import FormControl from '@mui/material/FormControl'
 import Input from '@mui/material/Input'
 import { useNavigate } from 'react-router-dom'

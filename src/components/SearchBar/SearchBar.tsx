@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Paper, IconButton } from '@mui/material'
-import { SearchIcon } from '../icons'
+import { SearchIcon } from '~/components/icons'
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState<string>('')

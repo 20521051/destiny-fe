@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { IconProps } from '../../types/icon.type'
+import { IconProps } from '~/types/icon.type'
 
 function HomeIcon({ initialSize, initialFill }: IconProps) {
   const [size, setSize] = useState<number>(initialSize || 120)

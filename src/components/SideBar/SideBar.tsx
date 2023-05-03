@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { DarkModeIcon, HomeIcon, LightModeIcon, StoryIcon } from '../icons'
+import { DarkModeIcon, HomeIcon, LightModeIcon, StoryIcon } from '~/components/icons'
 interface Props {
   mode: string
 }

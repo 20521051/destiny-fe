@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorLayout } from '../../layouts'
+import { ErrorLayout } from '~/layouts'
 
 const NotFound = () => {
   return (

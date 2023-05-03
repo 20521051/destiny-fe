@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppStore, CHPlay, DestinyIcon, FacebookIcon, LinkedinIcon, TelegramIcon } from '../icons'
+import { AppStore, CHPlay, DestinyIcon, FacebookIcon, LinkedinIcon, TelegramIcon } from '~/components/icons'
 import { useNavigate } from 'react-router'
 
 const Footer = () => {
