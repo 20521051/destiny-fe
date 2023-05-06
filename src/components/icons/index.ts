@@ -10,6 +10,7 @@ export { default as DarkModeIcon } from './DarkModeIcon'
 export { default as HomeIcon } from './HomeIcon'
 export { default as StoryIcon } from './StoryIcon'
 
+export { default as NotificationIcon } from './NotificationIcon'
 export { default as DestinyIcon } from './DestinyIcon'
 export { default as FacebookIcon } from './FacebookIcon'
 export { default as AppleIcon } from './AppleIcon'

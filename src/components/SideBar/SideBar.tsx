@@ -15,9 +15,9 @@ const SideBar = ({ mode, current }: Props) => {
   // useEffect(() => {}, [mode])
   return (
     <aside className='w-[100px] border-r-slate-300 border-r-2 flex flex-col text-center items-center'>
-      <div className='w-[50px] h-[50px] rounded-full mt-5 overflow-hidden flex'>
-        <img src='/src/assets/images/Naraka.jpg' alt='avatar' className='inline-block object-cover' />
-      </div>
+      <button className='w-[50px] h-[50px] rounded-3xl mt-5 text-5xl font-bold text-white bg-blue-950 flex items-center justify-center'>
+        +
+      </button>
       <nav className='max-h-[500px] flex flex-col justify-between px-[18px] items-center mt-6'>
         <ul>
           <button
