@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { DestinyIcon, NotificationIcon } from '~/components/icons'
 import { SearchBar, CustomizedButtons } from '~/components'
+import VNFlagIcon from '../icons/VNFlagIcon'
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState<boolean>(false)
@@ -25,10 +26,13 @@ const Header = () => {
       <div>
         <SearchBar />
       </div>
-      <div className='w-[115px] flex justify-end items-center'>
+      <div className='w-[130px] flex justify-end items-center'>
         {isLogin ? (
           <React.Fragment>
             <div>
+              <VNFlagIcon initialSize={27}></VNFlagIcon>
+            </div>
+            <div className='mx-3'>
               <NotificationIcon initialSize={26}></NotificationIcon>
             </div>
             <div
