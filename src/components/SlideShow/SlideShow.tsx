@@ -26,7 +26,9 @@ const SlideShow = () => {
   const [status, setStatus] = useState<boolean>(false)
 
   const prevSlide = () => {
-    const newIndex = (currentIndex - 1) % slides.length
+    let newIndex
+    if (currentIndex != 0) newIndex = (currentIndex - 1) % slides.length
+    else newIndex = slides.length - 1
     setCurrentIndex(newIndex)
     setActiveIndex(newIndex)
   }
@@ -65,7 +67,7 @@ const SlideShow = () => {
   }, [status])
 
   return (
-    <div className='max-w-[1400px] h-[450px] w-full m-auto py-16 px-20 relative group'>
+    <div className='max-w-[1400px] h-[380px] w-full pt-10 px-20 relative group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='w-[1300px] h-[280px] rounded-2xl bg-center bg-cover duration-500'
@@ -84,12 +86,12 @@ const SlideShow = () => {
       >
         &gt;
       </button>
-      <div className='flex top-4 justify-start py-5 ml-6 mt-5'>
+      <div className='flex top-4 justify-start pt-5 ml-6 mt-5'>
         {slides.map((slide, slideIndex) => (
           <button
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`text-2xl cursor-pointer container bg-gray-300 rounded-full w-[30px] h-3 m-2 ${
+            className={`text-2xl cursor-pointer container bg-gray-300 rounded-full w-[30px] h-3 mx-2 ${
               activeIndex === slideIndex ? 'w-[44px] bg-gray-500' : ''
             }`}
           ></button>

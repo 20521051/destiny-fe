@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import { Header, Footer, SideBar, SlideShow } from '~/components'
+import { Header, Footer, SideBar, SlideShow, Categories } from '~/components'
 
 const Home = () => {
   return (
-    <div className='Home'>
+    <div>
       <Header></Header>
       <div className='flex'>
         <SideBar mode='light'></SideBar>
-        <div className=''>
+        <div>
           <SlideShow></SlideShow>
+          <Categories></Categories>
         </div>
       </div>
       <Footer></Footer>
