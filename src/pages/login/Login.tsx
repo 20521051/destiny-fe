@@ -48,11 +48,11 @@ export default function Login() {
   return (
     <div className='h-[713px] flex justify-center bg-gradient-to-r from-emerald-100 to-pink-100'>
       <div className='w-3/4 flex bg-white m-20 rounded-2xl border-[1px] border-solid border-slate-400'>
-        <aside className='w-[45%] bg-teal-200 rounded-2xl overflow-hidden'>
-          <div className='mt-5'>
+        <aside className='w-[45%] rounded-2xl overflow-hidden flex relative'>
+          <div className='absolute top-5 left-0'>
             <DestinyIcon initialSize={64} />
           </div>
-          <img className='inline-block object-cover' src='/src/assets/images/Naraka.jpg' alt='img-aside'></img>
+          <img className='inline-block object-cover' src='/src/assets/images/Naraka.jpg' alt='img-aside' />
         </aside>
         <div className='w-[55%] flex justify-center items-center'>
           <div className='w-[60%] flex flex-col'>
