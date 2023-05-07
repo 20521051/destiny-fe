@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Header, Footer, SideBar, SlideShow, Categories, Quality } from '~/components'
+import { Status } from '~/components/Status'
 import { Stories } from '~/components/Stories'
 
 const Home = () => {
@@ -12,7 +13,6 @@ const Home = () => {
           <SlideShow></SlideShow>
           <Categories></Categories>
           <Stories></Stories>
-          <Quality></Quality>
         </div>
       </div>
       <Footer></Footer>
