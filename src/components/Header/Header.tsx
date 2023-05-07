@@ -11,8 +11,8 @@ const Header = () => {
     navigate('/')
   }
   const handleClickSignIn = () => {
-    // navigate('/login')
-    setIsLogin(true)
+    navigate('/login')
+    // setIsLogin(true)
   }
   const handleTest = () => {
     setIsLogin(false)
