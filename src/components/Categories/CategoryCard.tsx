@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const CategoryItem = () => {
+const CategoryCard = () => {
   const [hovered, setHovered] = useState<boolean>(false)
 
   const handleMouseLeave = () => {
@@ -32,4 +32,4 @@ const CategoryItem = () => {
   )
 }
 
-export default CategoryItem
+export default CategoryCard
