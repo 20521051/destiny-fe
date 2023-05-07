@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Header, Footer, SideBar, SlideShow, Categories } from '~/components'
+import { Header, Footer, SideBar, SlideShow, Categories, Quality } from '~/components'
 import { Stories } from '~/components/Stories'
 
 const Home = () => {
@@ -12,6 +12,7 @@ const Home = () => {
           <SlideShow></SlideShow>
           <Categories></Categories>
           <Stories></Stories>
+          <Quality></Quality>
         </div>
       </div>
       <Footer></Footer>
