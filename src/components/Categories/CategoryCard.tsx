@@ -12,7 +12,7 @@ const CategoryCard = () => {
   return (
     <button
       className={`
-          min-w-[190px] w-[190px] h-[220px] mx-[3px] rounded-xl border-slate-300 border-2 flex flex-col items-center
+          min-w-[190px] w-[190px] h-[220px] mx-[3px] rounded-xl border-slate-300 border-2 flex flex-col items-center mb-3
           ${hovered ? 'bg-slate-300' : 'bg-white'}
           `}
       onMouseEnter={handleMouseEnter}
