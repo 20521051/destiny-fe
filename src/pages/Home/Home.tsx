@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Header, Footer, SideBar, SlideShow, Categories, Players } from '~/components'
-import { Stories } from '~/components/Stories'
+import { Header, Footer, SideBar, SlideShow, Categories, Players, Stories, Comment } from '~/components'
 
 const Home = () => {
   return (
