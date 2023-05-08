@@ -1,4 +1,3 @@
-import { Avatar, AvatarGroup } from '@mui/material'
 import React, { useState } from 'react'
 
 interface PlayerCardProps {
@@ -8,8 +7,11 @@ interface PlayerCardProps {
 const PlayerCard = ({ userImage, name }: PlayerCardProps) => {
   return (
     <div className='min-w-[230px] w-[230px] h-[280px] mx-[3px] rounded-xl border-slate-300 border-[1px]'>
-      <div className='h-[180px] rounded-t-xl overflow-hidden flex' aria-hidden='true'>
+      <div className='h-[180px] rounded-t-xl overflow-hidden flex relative' aria-hidden='true'>
         <img src={userImage} alt='avatar' className='inline-block object-fill' />
+        <button className='w-[80px] h-[30px] bg-orange-600 text-white font-bold text-center rounded-2xl absolute right-3 bottom-3 text-xl'>
+          100.000 đ/h
+        </button>
       </div>
       <div>
         <div>
@@ -31,7 +33,11 @@ const PlayerCard = ({ userImage, name }: PlayerCardProps) => {
               <img src='/src/assets/images/freefire.png' alt='avatar' className='inline-block object-fill' />
             </div>
             <div className='w-[30px] h-[30px] overflow-hidden flex rounded-full relative' aria-hidden='true'>
-              <img src='/src/assets/images/freefire.png' alt='avatar' className='inline-block object-fill' />
+              <img
+                src='/src/assets/images/freefire.png'
+                alt='avatar'
+                className='inline-block object-fill brightness-50'
+              />
               <p className='absolute font-bold text-white top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
                 +2
               </p>
