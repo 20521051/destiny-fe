@@ -1,7 +1,7 @@
 import React from 'react'
 import Rating from '@mui/material/Rating'
 import Box from '@mui/material/Box'
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from '@mui/icons-material/Star'
 const labels: { [index: string]: string } = {
   0.5: 'Useless',
   1: 'Useless+',
@@ -20,8 +20,8 @@ function getLabelText(value: number) {
 }
 
 const Quality = () => {
-  const [value, setValue] = React.useState<number | null>(2);
-  const [hover, setHover] = React.useState(-1);
+  const [value, setValue] = React.useState<number | null>(2)
+  const [hover, setHover] = React.useState(-1)
   return (
     <div className='rounded-2xl	 border-2 border-slate-300 w-[300px] h-[250px] '>
       <div className='m-2'>
@@ -53,9 +53,15 @@ const Quality = () => {
         </div>
       </div>
       <div className='flex flex-col items-center h-[180px] justify-between'>
-        <button className='rounded-2xl border-2 border-slate-300 bg-red-500 text-white w-[290px] h-[50px] font-bold text-3xl '>Thuê</button>
-        <button className='rounded-2xl border-2 border-slate-300 bg-white text-black w-[290px] h-[50px] font-bold text-3xl'>Donate</button>
-        <button className='rounded-2xl border-2 border-slate-300 bg-white text-black w-[290px] h-[50px] font-bold text-3xl'>Icon Chat</button>
+        <button className='rounded-2xl border-2 border-slate-300 bg-red-500 text-white w-[290px] h-[50px] font-bold text-3xl '>
+          Thuê
+        </button>
+        <button className='rounded-2xl border-2 border-slate-300 bg-white text-black w-[290px] h-[50px] font-bold text-3xl'>
+          Donate
+        </button>
+        <button className='rounded-2xl border-2 border-slate-300 bg-white text-black w-[290px] h-[50px] font-bold text-3xl'>
+          Icon Chat
+        </button>
       </div>
     </div>
   )
