@@ -4,7 +4,6 @@ import { Header, Footer, SideBar, SlideShow, Categories, Players, Stories } from
 const Home = () => {
   return (
     <div>
-      <Header></Header>
       <div className='flex'>
         <SideBar mode='light'></SideBar>
         <div>
@@ -14,7 +13,6 @@ const Home = () => {
           <Players></Players>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   )
 }

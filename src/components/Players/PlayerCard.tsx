@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 interface PlayerCardProps {
+  userId: string
   userImage: string
   name: string
 }
 const PlayerCard = ({ userImage, name }: PlayerCardProps) => {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate('/userID')
+  }
   return (
-    <div className='min-w-[230px] w-[230px] h-[280px] mx-[3px] rounded-xl border-slate-300 border-[1px]'>
+    <button
+      className='min-w-[230px] w-[230px] h-[280px] mx-[3px] rounded-xl border-slate-300 border-[1px]'
+      onClick={handleClick}
+    >
       <div className='h-[180px] rounded-t-xl overflow-hidden flex relative' aria-hidden='true'>
         <img src={userImage} alt='avatar' className='inline-block object-fill' />
         <button className='w-[80px] h-[30px] bg-orange-600 text-white font-bold text-center rounded-2xl absolute right-3 bottom-3 text-xl'>
@@ -49,7 +57,7 @@ const PlayerCard = ({ userImage, name }: PlayerCardProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   )
 }
 

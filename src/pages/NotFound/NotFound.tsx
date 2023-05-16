@@ -3,9 +3,9 @@ import { ErrorLayout } from '~/layouts'
 
 const NotFound = () => {
   return (
-    <div className='NotFound'>
-      <p className=''>Oops... Page not found!</p>
+    <div className='flex flex-col items-center justify-center'>
       <ErrorLayout />
+      <p className='text-5xl translate-y-[-60px]'>Oops... Page not found!</p>
     </div>
   )
 }
