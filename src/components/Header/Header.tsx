@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { DestinyIcon, NotificationIcon } from '~/components/icons'
+import { DestinyIcon, NotificationIcon, VNFlagIcon } from '~/components/icons'
 import { SearchBar, CustomizedButtons } from '~/components'
-import VNFlagIcon from '../icons/VNFlagIcon'
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState<boolean>(false)

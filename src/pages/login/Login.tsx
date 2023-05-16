@@ -67,7 +67,7 @@ export default function Login() {
               </p>
             </header>
 
-            <div>
+            <form>
               <div className='flex flex-col justify-between mb-5'>
                 <FormControl sx={{ m: 1, width: '100%' }} variant='outlined'>
                   <h2 className='mb-4'>Phone</h2>
@@ -119,7 +119,7 @@ export default function Login() {
               <div className='flex justify-center mt-8 mb-12'>
                 <button className='bg-slate-400 w-[200px] h-[40px] rounded-3xl'>Login</button>
               </div>
-            </div>
+            </form>
 
             <footer className='flex flex-col items-center'>
               <div className='text-center italic mb-2'>Or continue with</div>
